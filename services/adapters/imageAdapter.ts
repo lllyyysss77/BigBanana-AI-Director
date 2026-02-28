@@ -293,13 +293,11 @@ export const callImageApi = async (
     }],
     generationConfig: {
       responseModalities: ['TEXT', 'IMAGE'],
+      imageConfig: {
+        aspectRatio: aspectRatio,
+      },
     },
   };
-  if (aspectRatio !== '16:9') {
-    requestBody.generationConfig.imageConfig = {
-      aspectRatio: aspectRatio,
-    };
-  }
 
   const response = await retryOperation(async () => {
     const res = await fetch(`${apiBase}${endpoint}`, {
