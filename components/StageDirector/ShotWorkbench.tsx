@@ -30,6 +30,7 @@ import {
 import SceneContext from './SceneContext';
 import KeyframeEditor from './KeyframeEditor';
 import VideoGenerator from './VideoGenerator';
+import DubbingPanel from './DubbingPanel';
 import { resolveVideoModelRouting } from './utils';
 import { getModelById } from '../../services/modelRegistry';
 import {
@@ -858,13 +859,16 @@ const ShotWorkbench: React.FC<ShotWorkbenchProps> = ({
                 hasStartFrame={hasStartFrame}
                 hasEndFrame={hasEndFrame}
                 onGenerate={onGenerateVideo}
-                onGenerateDubbing={onGenerateDubbing}
-                onClearDubbing={onClearDubbing}
                 onEditPrompt={onEditVideoPrompt}
                 onModelChange={(modelId) => {
                   setLocalVideoModelId(modelId);
                   onVideoModelChange(modelId);
                 }}
+              />
+              <DubbingPanel
+                shot={shot}
+                onGenerateDubbing={onGenerateDubbing}
+                onClearDubbing={onClearDubbing}
               />
             </div>
           )}
