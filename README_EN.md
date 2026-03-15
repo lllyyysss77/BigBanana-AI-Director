@@ -145,16 +145,15 @@ For **quick one-off creative tasks**, try our online tool platform:
 **Best For**: Daily creation, rapid prototyping, idea validation  
 **This Project Is For**: Systematic drama production, batch video generation, industrial workflows
 
-## Client Download
+## Online Version
 
-Download the installer and get started right away — no development environment needed:
+No client download is required. Use the web version directly in your browser:
 
-**📥 Download BigBanana AI Director Client (Windows)**
+**🌐 Open BigBanana AI Director Online**
 
-Access the shared file on Quark Drive:
-Link: https://pan.quark.cn/s/dfbfe01eefdf
+[https://director.tree456.com/](https://director.tree456.com/)
 
-> 💡 Open the link to download the installer, then double-click to install — supports Windows.
+> 💡 Open the online version in your browser and start using it immediately, with no installation and always up-to-date access.
 
 ---
 
