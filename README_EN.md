@@ -23,22 +23,30 @@ We still provide full source code delivery for commercial edition customers.
 ### Project Management
 ![Project Management](./images/项目管理.png)
 
-### Phase 01: Script & Storyboard
+### Project Overview & Novel Import
+![Full Novel Import](./images/导入整篇小说.png)
+
+### Worldview Building
+![Worldview Building](./images/世界观.png)
+
+### Phase 01: Narrative Planning
 ![Script Creation](./images/剧本创作.png)
 ![Script & Story](./images/剧本与故事.png)
 
-### Phase 02: Character & Scene Assets
+### Phase 02: Consistency Assets
 ![Character & Scene](./images/角色场景.png)
 ![Scenes](./images/场景.png)
+![Props](./images/道具.png)
 
-### Phase 03: Director Workbench
+### Phase 03: Shot Production
 ![Director Workbench](./images/导演工作台.png)
 ![Nine-Grid Storyboard](./images/镜头九宫格.png)
 ![Shots & Frames](./images/镜头与帧.png)
 ![Shots & Frames Detail](./images/镜头与帧1.png)
 
-### Phase 04: Export
-![Export](./images/成片导出.png)
+### Phase 04: Delivery Center
+![CutOS Rough Cut](./images/CutOs剪辑.png)
+![Delivery Center](./images/成片导出.png)
 
 ### Prompt Management
 ![Prompt Management](./images/提示词管理.png)
@@ -52,37 +60,40 @@ Traditional Text-to-Video models often struggle with specific camera movements a
 
 ## Key Features
 
-### Phase 01: Script & Storyboard
-*   **Intelligent Breakdown**: Input a novel or story outline, and the AI automatically breaks it down into a standard script structure (Scenes, Time, Atmosphere).
-*   **Visual Translation**: Automatically converts text descriptions into professional visual prompts.
-*   **Pacing Control**: Set target durations (e.g., 30s Teaser, 3min Short), and the AI plans shot density accordingly.
-*   **✨ Manual Editing (NEW)**:
-    *   Edit character visual descriptions and shot prompts
-    *   Edit character list for each shot (add/remove characters)
-    *   Edit action descriptions and dialogues for each shot
-    *   Ensure generated results meet expectations with precise control over every detail
+### Project-Level Workflow
+*   **Project Hub**: Manage recent projects, account access, model settings, the global asset library, and full-library import/export from one place.
+*   **Project Overview**: Organize content by `Project -> Season -> Episode`, import a full novel and split it into episode drafts automatically, and export full-project backups.
+*   **Project Resources & Worldview**: Build reusable characters, scenes, props, maps, regions, locations, and music/worldbuilding anchors before episode production. These constraints feed back into later script, asset, and shot generation.
 
-### Phase 02: Assets & Casting
-*   **Character Consistency**:
-    *   Generate standard Reference Images for every character.
-    *   **Wardrobe System**: Support for multiple looks (e.g., Casual, Combat, Injured) while maintaining facial identity based on a Base Look.
-*   **Set Design**: Generate environmental reference images to ensure lighting consistency across different shots in the same location.
+### Phase 01: Narrative Planning
+*   **Structured Script Generation**: Start from a story outline, novel excerpt, or episode idea, and let the AI generate structured characters, scenes, props, and shots.
+*   **Configuration-Driven Output**: Set language, target duration, visual style, and model stack up front to keep the whole pipeline aligned.
+*   **AI Continuation + Manual Refinement**: Continue, rewrite, and manually edit script body text, character descriptions, shot actions, dialogue, and prompts.
+*   **Auto-Production Planning Preview**: Before batch generation starts, review an AI-generated plan and decide shot by shot whether to use the nine-grid storyboard route or the keyframe route.
 
-### Phase 03: Director Workbench
-*   **Grid Storyboard**: Manage all shots in a panoramic view.
-*   **Precise Control**:
-    *   **Start Frame**: The strictly consistent starting image of the shot.
-    *   **End Frame**: (Optional) Define the state at the end of the shot (e.g., character turns head, lighting shifts).
-*   **Nine-Grid Storyboard Preview (NEW)**:
-    *   Split one shot into 9 viewpoints, review/edit panel descriptions, then generate the 3x3 storyboard image.
-    *   Use the whole grid as the start frame, or crop a selected panel as the start frame.
-*   **Context Awareness**: When generating shots, the AI automatically reads the Context (Current Scene Image + Character's Specific Outfit Image) to solve continuity issues.
-*   **Dual Video Modes**: Supports single-image Image-to-Video and Start/End keyframe interpolation.
+### Phase 02: Consistency Assets
+*   **Character Consistency Sheets**: Generate reference images for each character and maintain multiple looks through the wardrobe system without losing identity.
+*   **Scene / Prop Assetization**: Build reusable scene assets and independent prop prompts, references, and shape references.
+*   **Asset Library Reuse**: Reuse characters, scenes, and props from project resources or the cross-project asset library.
+*   **Batch Asset Completion**: Fill missing character, scene, and prop images in one pass before moving into shot production.
 
-### Phase 04: Export
-*   **Timeline Preview**: Preview generated motion comic segments in a timeline format.
-*   **Render Tracking**: Monitor API render progress in real-time.
-*   **Asset Export**: Export all high-def keyframes and MP4 clips for post-production in Premiere/After Effects.
+### Phase 03: Shot Production
+*   **Grid-Based Shot Workbench**: Manage all shots in a panoramic workspace with scene, character, prop, and action context visible per shot.
+*   **Keyframe Precision Control**: Generate, upload, inherit, and edit Start Frames and End Frames for tighter shot-state control.
+*   **Nine-Grid Storyboard Preview**: Generate 9 candidate viewpoints first, then use the whole grid or a cropped panel as the final start frame.
+*   **Context-Aware Generation**: Shot generation automatically reads the current scene image, outfit references, and prop references to reduce continuity breaks.
+*   **Dual Video Routes**: Supports both single-image Image-to-Video and Start/End keyframe interpolation.
+
+### Phase 04: Delivery Center
+*   **Timeline Preview & Render Tracking**: Inspect completion progress, rough-cut timelines, and render logs in real time.
+*   **CutOS-Style AI Rough Cut**: Use the built-in timeline editor to reorder, trim, filter, and inspect generated shots before export.
+*   **Multiple Delivery Formats**: Export master videos, zipped shot segments, and source assets for downstream work in Premiere, Resolve, and other NLEs.
+*   **Episode-Level Backup**: Import/export the current episode data for cross-device migration and collaboration.
+
+### Phase 05: Prompt Management
+*   **Centralized Search & Editing**: Review and edit templates, character prompts, scene prompts, prop prompts, keyframe prompts, and video prompts in one place.
+*   **Version Rollback**: Keep prompt edit history and restore earlier prompt versions quickly.
+*   **Cross-Stage Debugging**: When results become unstable, use this page to trace and fix upstream prompt issues directly.
 
 ## Tech Stack
 
@@ -202,11 +213,13 @@ docker-compose up -d --force-recreate
 
 ## Quick Start
 
-1.  **Configure Key**: Launch the app and input your AntSK API Key. [**Buy API Key**](https://api.antsk.cn)
-2.  **Input Story**: In Phase 01, enter your story idea and click "Generate Script".
-3.  **Art Direction**: Go to Phase 02, generate character sheets and scene concepts.
-4.  **Shot Production**: In Phase 03, generate the Start Frame first; for tighter control, add an End Frame or use the Nine-Grid preview to choose Start Frame composition.
-5.  **Motion Generation**: Select a video model and generate clips; Start-only frames can produce single-image video, while Start+End frames provide more stable transitions.
+1.  **Set up account / keys**: On first launch, add your AntSK API Key or Token through onboarding, Account Center, or Model Settings. [**Buy API Key**](https://api.antsk.cn)
+2.  **Create a project**: Start from the Project Hub so seasons, episodes, reusable assets, and delivery outputs all stay organized under one project.
+3.  **Build the project structure**: In Project Overview, create seasons/episodes manually or import a full novel and let the system split it into multiple episode drafts.
+4.  **Prepare reusable resources**: Add project-level characters, scenes, props, and worldview anchors first if you want stronger consistency across episodes.
+5.  **Enter Phase 01: Narrative Planning**: Generate the structured script, then review and refine characters, actions, dialogue, and prompts. If you want batch production, review the auto-production plan first.
+6.  **Move into Phase 02 / 03**: Complete consistency assets, then generate start frames, end frames, nine-grid boards, and video clips in Shot Production.
+7.  **Finish in Phase 04 / 05**: Preview, rough-cut, export, and back up in the Delivery Center; if output quality needs tuning, return to Prompt Management for centralized prompt fixes.
 
 ---
 
